@@ -19,13 +19,33 @@ Test your understanding before diving into the code.
 
 **Question 1:** What is the key difference between a Pandas `Series` and a `DataFrame`?
 
+```
+Series is 1 dimensional, dataframe is 2 dimensional
+```
+
 **Question 2:** You run `df.loc[0:3]`. How many rows do you get? What about `df.iloc[0:3]`?
+
+```
+df.loc[0:3] gives you 4 rows because its asking for labels 0, 1, 2 and 3. Df.iloc[0:3] gives you 3 rows because it works like indexing, so it gives you 0, 1 and 2 (stops before 3)
+```
 
 **Question 3:** You have a DataFrame with a `price` column stored as `object` type (strings like "£45.99"). What problem does this cause, and how do you fix it?
 
+```
+You can't do mathematical operations on a string column, you would need to convert it to float using .astype()"
+```
+
 **Question 4:** When would you use `.apply()` instead of a direct vectorised operation like `df['col'] * 2`?
 
+```
+When you have a complex function that you want to execute like labelling cells when they are a certain value
+```
+
 **Question 5:** How do you select all numeric columns from a DataFrame, excluding float types?
+
+```
+df.select\_dtypes(include = 'number', exclude = 'float')
+```
 
 <details>
 <summary>💡 Check Your Answers</summary>
